@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "EmailTag Generator",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Generate and track Gmail +tag addresses with ease.",
   "update_url": "https://emailtag.j03.page/updates.xml",
   "action": {
