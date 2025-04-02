@@ -1,1 +1,23 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EmailTag Generator</title>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: sans-serif; padding: 20px; width: 300px; }
+    input, button { margin-top: 10px; width: 100%; padding: 8px; }
+    #result { margin-top: 10px; word-break: break-word; background: #f0f0f0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h3>EmailTag Generator</h3>
+  <input type="email" id="baseEmail" placeholder="Enter your Gmail email address" />
+  <input type="text" id="tag" placeholder="Enter tag (e.g. shop, trial, versionA)" />
+  <button id="generate">Generate Tagged Email</button>
+  <div id="result"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
 
