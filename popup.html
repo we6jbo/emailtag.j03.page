@@ -4,12 +4,14 @@
 <head>
   <title>EmailTag Generator</title>
   <meta charset="utf-8">
+  
+  <!-- Embedded CSS Styles -->
   <style>
     body { font-family: sans-serif; padding: 20px; width: 300px; }
     input, button { margin-top: 10px; width: 100%; padding: 8px; }
     #result { margin-top: 10px; word-break: break-word; background: #f0f0f0; padding: 10px; }
 
-    /* New styles for the About Me button and section */
+    /* Styles for the About Me button and section */
     #about-btn {
       background-color: #4CAF50;
       color: white;
@@ -34,41 +36,7 @@
     }
   </style>
 </head>
+
 <body>
   <h3>EmailTag Generator</h3>
-  <input type="email" id="baseEmail" placeholder="Enter your Gmail (e.g. joneal97m@gmail.com)" />
-  <input type="text" id="tag" placeholder="Enter tag (e.g. shop, trial, versionA)" />
-  <button id="generate">Generate Tagged Email</button>
-  <div id="result"></div>
-
-  <!-- New About Me Button -->
-  <button id="about-btn">About Me</button>
-
-  <!-- New About Me Section -->
-  <div id="about-section">
-    <p>
-      Hi, I'm <strong>Jeremiah O'Neal</strong>! I created EmailTag to simplify and organize your email experience. I'm passionate about cybersecurity, IT, and developing tools to boost productivity.
-    </p>
-    <p>
-      <a href="https://j03.page/" target="_blank">Visit my website</a>
-    </p>
-  </div>
-
-  <!-- JavaScript -->
-  <script>
-    // Existing EmailTag Generator Script
-    document.getElementById("generate").addEventListener("click", () => {
-      const baseEmail = document.getElementById("baseEmail").value.trim();
-      const tag = document.getElementById("tag").value.trim();
-      const resultDiv = document.getElementById("result");
-
-      if (!baseEmail.includes("@gmail.com")) {
-        resultDiv.textContent = "Please enter a valid Gmail address.";
-        return;
-      }
-
-      const [user, domain] = baseEmail.split("@");
-      const taggedEmail = `${user}+${tag}@${domain}`;
-
-      navigator.clipboard.writeText(taggedEmail).then(() => {
-        resultDiv.innerHTML = `✅ <strong>${taggedEmail}</strong><br><small>Copied to clipboard</
+  <input type="email" id="baseEmail" placeholder="Enter
