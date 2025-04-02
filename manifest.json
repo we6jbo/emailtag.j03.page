@@ -3,6 +3,7 @@
   "name": "EmailTag Generator",
   "version": "1.0",
   "description": "Generate and track Gmail +tag addresses with ease.",
+  "update_url": "https://emailtag.j03.page/updates.xml",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
