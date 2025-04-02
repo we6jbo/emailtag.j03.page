@@ -12,12 +12,30 @@
 </head>
 <body>
   <h3>EmailTag Generator</h3>
-  <input type="email" id="baseEmail" placeholder="Enter your Gmail email address" />
+  <input type="email" id="baseEmail" placeholder="Enter your Gmail (e.g. joneal97m@gmail.com)" />
   <input type="text" id="tag" placeholder="Enter tag (e.g. shop, trial, versionA)" />
   <button id="generate">Generate Tagged Email</button>
   <div id="result"></div>
+  <script>
+    document.getElementById("generate").addEventListener("click", () => {
+      const baseEmail = document.getElementById("baseEmail").value.trim();
+      const tag = document.getElementById("tag").value.trim();
+      const resultDiv = document.getElementById("result");
 
-  <script src="popup.js"></script>
+      if (!baseEmail.includes("@gmail.com")) {
+        resultDiv.textContent = "Please enter a valid Gmail address.";
+        return;
+      }
+
+      const [user, domain] = baseEmail.split("@");
+      const taggedEmail = `${user}+${tag}@${domain}`;
+
+      navigator.clipboard.writeText(taggedEmail).then(() => {
+        resultDiv.innerHTML = `✅ <strong>${taggedEmail}</strong><br><small>Copied to clipboard</small>`;
+      }).catch(err => {
+        resultDiv.textContent = taggedEmail + " (Could not copy to clipboard)";
+      });
+    });
+  </script>
 </body>
 </html>
-
