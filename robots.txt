@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emailtag.j03.page/sitemap.xml
